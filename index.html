@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Budget App</h1>
+    </header>
+
+    <section class="first-form-box" id="first-form-box">
+        <form id="first-form">
+            <label for="my-input" class="first-form-input-label">Budget:</label>
+            <input type="number" min="100" name="userBuget" required class="my-input" id="first-form-input"
+                placeholder="Enter monthly budget." />
+            <div class="first-form-btn">
+                <button type="submit" class="button-86">Set Budget</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="expense-form-box" id="expense-form-box">
+        <form class="expense-form" id="expense-form">
+            <label for="second-form-date-inp">Due Date</label>
+            <input type="date" name="date" id="second-form-date-inp" class="date-input" required value="2023-06-17" />
+            <label for="second-form-amount-inp">Amount</label>
+            <input type="number" name="Amount" id="second-form-amount-inp" class="amount-input"
+                placeholder="Enter amount" required value="100" />
+
+            <label for="second-form-Category-inp">Category</label>
+            <input type="text" name="Category" id="second-form-Category-inp" class="category-input"
+                placeholder="e.g. Food, Transportation, Shopping" required value="Food" />
+
+            <label for="second-form-Description">Description<b class="asterisk-icon">&#42;</b></label>
+            <input type="text" name="Description" id="second-form-Description" class="details-input"
+                placeholder="Details (optional)" required value="Groceries" />
+
+            <label for="second-form-payment-date-inp">Payment Date</label>
+            <input type="date" name="PaymentDate" id="second-form-payment-date-inp" class="payment-date-input"
+                placeholder="Payment date (optional)" required value="2023-06-20" />
+            <div class="first-form-btn">
+                <button type="submit" class="button-86">Add Expense</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="expense-box" id="list_item_box">
+        <h2 class="heading">Expense Tracker</h2>
+        <div class="expense-container">
+            <div class="expenseList-head">
+                <button class="button-86" id="add-expense">Add Expense</button>
+            </div>
+            <ul class="ul" id="list-ul">
+
+            </ul>
+            <h2>summary</h2>
+            <div class="result">
+                <div class="data-box div1">
+                    <p class="user-budget" id="user-budget"></p>
+                </div>
+                <div class="data-box div2">
+                    <p class="remain" id="remain"></p>
+                </div>
+
+                <div class="data-box div3">
+                    <p class="user-expenses" id="user-expenses"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <span class="my-alert"></span>
+</body>
+
+</html>
